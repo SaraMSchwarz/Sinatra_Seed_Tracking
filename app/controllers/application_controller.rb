@@ -1,43 +1,28 @@
 require './config/environment'
+require 'rack-flash'
 
 class ApplicationController < Sinatra::Base
 
   configure do
-      set :public_folder, 'public'
-      set :views, 'app/views'
-      enable :sessions
-      set :session_secret, 'secret'
+    set :public_folder, 'public'
+    set :views, 'app/views'
+    enable :sessions
+    set :session_secret, "seed_secret"
+    use Rack::Flash, sweep: true
   end
 
-  get "/" do
-    redirect to :"/login" unless logged_in?
+# :index = homepage
+  get '/' do
     erb :index
   end
 
-  get "/login" do
-    erb :login
-  end
-
-  get "/logout" do
-    session.destroy
-    redirect to :"/"
-  end
-
-  post "/login" do
-    user = User.find_by(:email => params[:email])
-    if user && user.authenticate(params[:password])
-      session[:user_id] = user.id
-    end
-    redirect to :"/"
-  end
-
   helpers do
-    def current_user
-      User.find(session[:user_id])
-    end
-
     def logged_in?
       !!session[:user_id]
+    end
+
+    def current_user
+      User.find(session[:user_id])
     end
   end
 

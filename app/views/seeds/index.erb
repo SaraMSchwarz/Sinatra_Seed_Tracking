@@ -1,0 +1,13 @@
+<h2> Hello, <%= @user.username %>!</h2>
+<h3>Here are all the seeds you have saved so far: </h3>
+
+<% @seeds.each_with_index do |seed, index| %>
+  <div>
+    <p>#<%= index+1 %>. <a href="/seeds/<%=seed.id%>"><%= seed.seed_name %></a></p>
+    <p>Category: <%= seed.seed_category %></p>
+    <br>
+  </div>
+<% end %>
+
+<a href="/seeds/new"> Add more seeds here </a> <br>
+<a href="/logout"> Log Out </a>

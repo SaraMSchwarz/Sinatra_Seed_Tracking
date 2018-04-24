@@ -5,7 +5,7 @@ class UserController < ApplicationController
       flash[:notice] = "Welcome back!"
       redirect to '/seeds'
     else
-      erb :'user/create_user'
+      erb :'users/new_user'
     end
   end
 
@@ -29,7 +29,7 @@ class UserController < ApplicationController
       flash[:notice] = "Welcome back!"
       redirect '/seeds'
     else
-      erb :'user/login'
+      erb :'users/login'
     end
   end
 

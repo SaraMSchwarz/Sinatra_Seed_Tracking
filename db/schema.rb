@@ -10,22 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_04_17_155308) do
+ActiveRecord::Schema.define(version: 2018_04_17_155254) do
 
   create_table "seeds", force: :cascade do |t|
-    t.string "name"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "name"
+    t.string "seed_name"
+    t.string "seed_category"
+    t.string "seed_variety"
+    t.string "seed_brand"
+    t.integer "seed_quantity"
+    t.string "seed_notes"
     t.string "password_digest"
   end
 
-  create_table "varieties", force: :cascade do |t|
-    t.string "name"
-    t.integer "count"
-    t.string "user_id"
-    t.string "seed_id"
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
   end
 
 end

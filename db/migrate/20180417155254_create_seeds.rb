@@ -8,6 +8,7 @@ class CreateSeeds < ActiveRecord::Migration[5.2]
       t.integer :seed_quantity
       t.string :seed_notes
       t.string :password_digest
+      t.integer :user_id
     end
   end
 end

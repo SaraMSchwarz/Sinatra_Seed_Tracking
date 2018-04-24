@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2018_04_17_155254) do
     t.integer "seed_quantity"
     t.string "seed_notes"
     t.string "password_digest"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|

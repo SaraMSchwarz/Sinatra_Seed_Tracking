@@ -1,16 +1,48 @@
-body, html {
-    height: 100%;
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900);
+
+body {
+  background-image: url("../images/veggies.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: auto;
+  background-position: center;
+  background-blend-mode: darken;
+  font-family: 'Source Sans Pro', sans-serif;
+  padding: 40px;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 24px;
 }
 
-.bg {
-    /* The image used */
-    background-image: url("veggies.jpeg");
+header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+h1 {
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 3rem;
+  white-space: nowrap;
+}
+p {
+  margin: 0;
+  font-size: 1.5rem;
+}
 
-    /* Full height */
-    height: 100%;
+a{
+ text-decoration:none;
+ color: #000000;
+}
 
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+a.button{
+ background-color:#FFFFFF;
+ /*border:1px solid #660000;*/
+ border-radius:5px;
+ /*color:#fff;*/
+ margin-right:10px;
+ padding:2px 2px 2px 2px;
 }

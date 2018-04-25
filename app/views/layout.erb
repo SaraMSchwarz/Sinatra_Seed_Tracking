@@ -1,16 +1,11 @@
-<link rel="stylesheet" type="text/css" href="/style.css">
+<link rel="stylesheet" href="/css/style.css">
 
 <html>
   <body>
-    <!-- <img src="/veggies.jpeg" alt="veggies" id="veggies" style="height: 100%;background-position: center; -->
-    <!-- background-repeat: no-repeat;
-    background-size: cover;"> -->
-    <h1> Seed Tracker </h1>
-    <p><i> A Database For All Your Seeds! </i></p>
-    <br>
-    <% if flash[:notice] %>
-      <b><i><p class="notice"><%= flash[:notice] %></p></i></b>
+
+      <% if flash[:notice] %>
+    <b><i><p class="notice"><%= flash[:notice] %></p></i></b>
     <% end %>
-  <%= yield %>
-  </body>
+    <%= yield %>
+    </body>
 </html>

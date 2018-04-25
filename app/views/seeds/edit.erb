@@ -1,13 +1,14 @@
-<h2> EDIT YOUR SEEDS HERE </h2>
+<h2> Make changes to your seed inventory </h2>
 <h2> <%= @seed.seed_name %> </h2>
 
-<p>Species: <%= @seed.name %></p>
+<p>Species: <%= @seed.seed_name %></p>
 <p>Seed Category: <%= @seed.seed_category %></p>
 <p>Variety: <%= @seed.seed_variety %></p>
 <p>Brand: <%= @seed.seed_brand %></p>
 <p>Quantity: <%= @seed.seed_quantity %></p>
 <p>Notes: <%= @seed.seed_notes %></p>
-
+<br>
+<br>
 <form method="POST" action="/seeds/<%=@seed.id%>">
   <input id="hidden" type="hidden" name="_method" value="patch">
   <p><b>Species: </b> <input type='text' name="species"></p>
@@ -26,10 +27,12 @@
   <p><b>Brand: </b><input type='text' name='seed_brand' value="N/A"></p>
   <p><b>Quantity: </b><input type='integer' name='seed_count' value="N/A"></p>
   <p><b>Notes: </b><input type='text' name='seed_notes' value="N/A"></p>
-
+  <br>
   <p><input type='submit' value='Update your seed inventory'></p>
 
 </form>
-
-<p><a href='/logout'> Log Out </a></p>
-<p><a href='/seeds'> Cancel </a></p>
+<div class="container">
+<p><a href='/logout' class="button"> Log Out </a></p>
+<br>
+<p><a href='/seeds' class="button"> Cancel </a></p>
+</div>

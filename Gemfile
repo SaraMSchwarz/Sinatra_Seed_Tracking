@@ -9,6 +9,7 @@ gem 'thin'
 gem 'shotgun'
 gem 'bcrypt'
 gem 'sinatra-flash'
+gem 'pg'
 
 group :development do
   gem 'tux'

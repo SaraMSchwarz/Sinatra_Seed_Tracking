@@ -1,5 +1,7 @@
 source 'http://rubygems.org'
 
+ruby '2.4.2'
+
 gem 'sinatra'
 gem 'activerecord', :require => 'active_record'
 gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
@@ -15,6 +17,5 @@ gem 'pg'
 group :development do
   gem 'tux'
   gem 'pry'
-gem 'sqlite3'
-
+  gem 'sqlite3'
 end

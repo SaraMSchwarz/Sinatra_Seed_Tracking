@@ -1,16 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald");
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
 
 body {
-  background-image: url("../images/veggies.jpeg");
+  background-image: url("../images/seeds.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 800px 650px;
+  background-size: 600px 600px;
   background-position: center;
   font-family: 'Cardo', serif;
   padding: 40px;
   text-align: center;
   color: #FFFFFF;
   font-size: 24px;
+  box-sizing: border-box;
 }
 
 header {
@@ -21,10 +23,12 @@ header {
   color: white;
   text-align: center;
 }
+
 h1 {
  font-family: 'Oswald', sans-serif;
  text-transform: uppercase;
  font-size: 60px;
+ letter-spacing: 2px;
 }
 
 h2, h3, h4, h5, h6 {
@@ -38,22 +42,27 @@ p {
   font-size: 1.5rem;
 }
 
-a{
+a {
  text-decoration:none;
  color: #000000;
 }
 
 a.button{
  background-color:#FFFFFF;
- /*border:1px solid #660000;*/
- border-radius:5px;
- /*color:#fff;*/
+ border-radius:7rem;
  margin-right:10px;
- padding:2px 2px 2px 2px;
+ padding: 0.75rem 1.5rem;
  font-family: 'Oswald', sans-serif;
  text-transform: uppercase;
+ text-decoration: none;
 }
 
-footer {
-
+.submit_btn {
+ background-color:#FFFFFF;
+ border-radius:7rem;
+ margin-right:10px;
+ padding: 0.75rem 1.5rem;
+ font-family: 'Oswald', sans-serif;
+ text-transform: uppercase;
+ text-decoration: none;
 }
